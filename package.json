@@ -1,0 +1,16 @@
+{
+  "name": "dbm-mcp-ga4",
+  "version": "1.0.0",
+  "description": "DBM MCP server for GA4 analytics",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google-analytics/data": "^4.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
