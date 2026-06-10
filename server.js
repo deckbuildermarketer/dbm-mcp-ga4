@@ -269,7 +269,9 @@ app.get("/", (req, res) => {
 
 app.post("/mcp", requireAuth, async (req, res) => {
   const { jsonrpc = "2.0", id = null, method, params } = req.body || {};
-
+  if (method === "notifications/initialized") {
+    return res.status(202).end();
+  }
   try {
     if (method === "initialize") {
       return res.json({
